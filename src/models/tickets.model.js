@@ -9,6 +9,8 @@ module.exports = function (app) {
   const tickets = new mongooseClient.Schema({
     title: { type: String, required: true },
     status: { type: String, required: true },
+    number: { type: Number, required: true, default: 0 },
+    projectId: { type: mongooseClient.Schema.Types.ObjectId, ref: 'projects', required: true },
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }

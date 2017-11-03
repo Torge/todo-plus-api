@@ -2,16 +2,12 @@
 
 
 
-const setNumber = require('../../hooks/set-number');
-
-
-
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [setNumber()],
+    create: [],
     update: [],
     patch: [],
     remove: []
